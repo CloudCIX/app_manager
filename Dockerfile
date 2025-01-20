@@ -11,7 +11,7 @@ RUN pip3 install -r requirements.txt \
 WORKDIR /application_framework
 EXPOSE 443
 # Setup the entrypoint - Migrate the DB changes if there are any, and run gunicorn
-ENTRYPOINT python3 manage.py migrate --database=training training \
+ENTRYPOINT python3 manage.py migrate --database=app_manager app_manager \
    && gunicorn --preload 
 
 # Genereate documentation 
