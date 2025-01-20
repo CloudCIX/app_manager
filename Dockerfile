@@ -16,5 +16,5 @@ ENTRYPOINT python3 manage.py migrate --database=app_manager app_manager \
 
 # Genereate documentation 
 RUN touch public-key.rsa \
-   && python3 manage.py docgen training \
+   && python3 manage.py docgen app_manager \
    && rm public-key.rsa
